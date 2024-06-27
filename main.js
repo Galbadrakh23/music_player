@@ -11,11 +11,17 @@ const songList = [
     src: "assets/2.mp3",
     cover: "./assets/2.jpg",
   },
+  {
+    name: "Wonderful to me",
+    artist: "Sketch Show",
+    src: "./assets/3.mp3",
+    cover: "./assets/3.jpg",
+  },
 ];
 
 const artistName = document.querySelector(".artist-name");
 const musicName = document.querySelector(".song-name");
-const fillbar = document.querySelector(".fillBar");
+const fillbar = document.querySelector(".fill-bar");
 const time = document.querySelector(".time");
 
 const cover = document.getElementById("cover");
@@ -24,6 +30,7 @@ const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 
 const prog = document.querySelector(".progress-bar");
+let volume_slider = document.querySelector(".volume_slider");
 
 let song = new Audio();
 let currentSong = 0;
@@ -91,4 +98,7 @@ function playMusic() {
 function seek(e) {
   const pos = (e.offsetX / prog.clientWidth) * song.duration;
   song.currentTime = pos;
+}
+function setVolume() {
+  curr_track.volume = volume_slider.value / 100;
 }

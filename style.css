@@ -50,7 +50,7 @@ body {
   max-width: 120px;
 }
 .container .disk .active {
-  animation: rotae 3s linear 0s infinite forwards;
+  animation: rotate 3s linear 0s infinite forwards;
 }
 .container .disk .cover {
   width: 145px;
@@ -58,7 +58,6 @@ body {
   position: absolute;
   top: 7px;
   left: 9px;
-  background: url(./assets/Ryuichi\ Sakamoto\ Ongaku\ Zukan.jpg);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
@@ -72,7 +71,7 @@ body {
   width: 30px;
   height: 30px;
   left: 15%;
-  top: 29%;
+  top: 25%;
   background-color: #fff;
   z-index: 1;
   border-radius: 50%;
@@ -116,4 +115,10 @@ body {
   100% {
     transform: rotateZ(360deg);
   }
+}
+.slider_container {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
